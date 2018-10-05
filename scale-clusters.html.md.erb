@@ -3,12 +3,11 @@ title: Scaling Existing Clusters
 owner: PKS
 ---
 
-Follow the steps below to scale up an existing cluster using the PKS CLI.
-<p class="note"><strong>Note</strong>: You cannot scale the number of worker nodes down. You can only scale the number of worker nodes up.</p>
+Follow the steps below to scale the number of worker nodes in an existing cluster using the PKS CLI.
 
 1. <%= partial 'login-pks-api' %>
 
-1. Run the following command below to scale up your cluster. You cannot scale the number of worker nodes down.
+1. Run the following command below to scale your cluster.
   <p class="note"><strong>Note</strong>: This command may roll additional VMs in the cluster, affecting workloads if the worker nodes are at capacity. This issue will be resolved in a future release of PKS.</p>
   <pre>
   pks resize CLUSTER-NAME --num-nodes WORKER-NODES
